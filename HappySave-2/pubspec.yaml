@@ -1,4 +1,4 @@
-name: firebase_app_web
+name: ocr
 description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
@@ -23,6 +23,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  gsheets:
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -34,6 +35,12 @@ dependencies:
   google_sign_in: ^5.4.2
   flutter_secure_storage: ^6.0.0
   otp_text_field: ^1.1.3
+  google_mlkit_text_recognition: ^0.4.0
+  image_picker: ^0.8.5+3
+  image_cropper: ^3.0.0
+  flutter_launcher_icons: ^0.10.0
+  intl: ^0.17.0
+  url_launcher: ^6.1.6
 
 dev_dependencies:
   flutter_test:

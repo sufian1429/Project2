@@ -1,8 +1,9 @@
-import 'package:firebase_app_web/Service/Auth_Service.dart';
-import 'package:firebase_app_web/pages/HomePage.dart';
-import 'package:firebase_app_web/pages/SignUpPage.dart';
+import 'package:ocr/Service/Auth_Service.dart';
+import 'package:ocr/pages/HomePage.dart';
+import 'package:ocr/pages/SignUpPage.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -42,6 +43,9 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: currentPage,
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.green,
+      ),
     );
   }
 }

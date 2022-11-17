@@ -1,4 +1,4 @@
-import 'package:firebase_app_web/pages/HomePage.dart';
+import 'package:ocr/pages/HomePage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
