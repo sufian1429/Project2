@@ -27,7 +27,7 @@ class _SignUpPageState extends State<SignUpPage> {
         child: Container(
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
-          color: Color(0xffbbfeba),
+          color: Colors.grey,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -43,7 +43,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 borderRadius: BorderRadius.circular(200),
                 child: Image.network(
                   'https://cdn4.iconfinder.com/data/icons/office-and-business-conceptual-flat/169/19-128.png',
-                  height: 144,
+                  height: 100,
                 ),
               ),
               SizedBox(
@@ -180,7 +180,7 @@ class _SignUpPageState extends State<SignUpPage> {
             borderRadius: BorderRadius.circular(15),
             side: BorderSide(
               width: 1,
-              color: Colors.grey,
+              color: Colors.green,
             ),
           ),
           child: Row(
@@ -218,7 +218,7 @@ class _SignUpPageState extends State<SignUpPage> {
         obscureText: obscureText,
         style: TextStyle(
           fontSize: 17,
-          color: Colors.white,
+          color: Colors.black,
         ),
         decoration: InputDecoration(
           labelText: labeltext,
@@ -237,7 +237,7 @@ class _SignUpPageState extends State<SignUpPage> {
             borderRadius: BorderRadius.circular(15),
             borderSide: BorderSide(
               width: 1,
-              color: Colors.grey,
+              color: Colors.white,
             ),
           ),
         ),

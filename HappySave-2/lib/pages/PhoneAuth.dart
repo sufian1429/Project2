@@ -25,7 +25,7 @@ class _PhoneAuthPageState extends State<PhoneAuthPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffbbfeba),
+      backgroundColor: Colors.grey,
       appBar: AppBar(
         backgroundColor: Colors.green,
         title: Text(

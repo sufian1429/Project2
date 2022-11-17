@@ -27,7 +27,7 @@ class _SignInPageState extends State<SignInPage> {
         child: Container(
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
-          color: Color(0xffbbfeba),
+          color: Colors.grey,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -218,7 +218,7 @@ class _SignInPageState extends State<SignInPage> {
         obscureText: obscureText,
         style: TextStyle(
           fontSize: 17,
-          color: Colors.white,
+          color: Colors.black,
         ),
         decoration: InputDecoration(
           labelText: labeltext,
@@ -237,7 +237,7 @@ class _SignInPageState extends State<SignInPage> {
             borderRadius: BorderRadius.circular(15),
             borderSide: BorderSide(
               width: 1,
-              color: Colors.grey,
+              color: Colors.black,
             ),
           ),
         ),
