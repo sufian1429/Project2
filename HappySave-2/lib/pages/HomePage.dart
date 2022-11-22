@@ -22,10 +22,10 @@ import '../transaction.dart';
 import 'google_sheets_api.dart';
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'loading_circle.dart';
-import 'plus_button.dart';
-import 'top_card.dart';
-import 'transaction.dart';
+import 'package:ocr/loading_circle.dart';
+import 'package:ocr/plus_button.dart';
+import 'package:ocr/top_card.dart';
+import 'package:ocr/transaction.dart';
 
 final Uri _url = Uri.parse(
     'https://docs.google.com/spreadsheets/d/1BSrxKH_6NIMa2zJa1OSG8LgeBc2YoKmBt1Mla508Mrk/edit?usp=sharing');
@@ -92,6 +92,9 @@ class _HomePageState extends State<HomePage> {
     showDialog(
         barrierDismissible: false,
         context: context,
+        // : RefreshIndicator(
+        //   onRefresh : refresh,
+
         builder: (BuildContext context) {
           return StatefulBuilder(
             builder: (BuildContext context, setState) {
@@ -204,6 +207,11 @@ class _HomePageState extends State<HomePage> {
   //         style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
   //       ),
   //     );
+
+  Future refresh() async {
+    startLoading();
+  }
+
   @override
   Widget build(BuildContext context) {
     if (GoogleSheetsApi.loading == true && timerHasStarted == false) {
@@ -225,9 +233,23 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       backgroundColor: Colors.grey[300],
-      body: Padding(
+      body:
+          // : RefreshIndicator(
+          //   onRefresh : refresh,
+          //   child : ListView.builder(
+          //     padding: const EdgeInsets.all(8),
+          //     return startLoading();
+          //   ),
+
+          // )
+
+          Padding(
         padding: const EdgeInsets.all(25.0),
-        child: Column(
+        child:
+            //  : RefreshIndicator(
+            //   onRefresh : refresh,
+
+            Column(
           children: [
             ElevatedButton(
                 child: Text('Google Sheets'),
@@ -282,11 +304,12 @@ class _HomePageState extends State<HomePage> {
             Row(children: <Widget>[
               Container(
                 width: 120,
-                height: 45,
+                height: 40,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(5),
                   border: Border.all(color: Colors.green, width: 3),
                 ),
+
                 child: DropdownButtonHideUnderline(
                   child: DropdownButton<String>(
                     // value: value,
@@ -295,10 +318,12 @@ class _HomePageState extends State<HomePage> {
                     // icon: Icon(Icons.arrow_drop_down, color: Colors.black),
                     isExpanded: true,
                     value: value,
+                    
                     icon: const Icon(Icons.arrow_drop_down,
                         color: Colors.greenAccent),
                     elevation: 10,
-                    style: const TextStyle(color: Colors.black),
+                    style: const TextStyle(color: Colors.black,),
+
                     // underline: Container(
                     //   height: 2,
                     //   color: Colors.deepPurpleAccent,

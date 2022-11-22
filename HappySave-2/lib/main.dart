@@ -4,7 +4,6 @@ import 'package:ocr/pages/SignUpPage.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
@@ -25,7 +24,8 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-    // authClass.signOut();
+    authClass.signOut();
+    
     checkLogin();
   }
 
@@ -43,9 +43,12 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: currentPage,
       debugShowCheckedModeBanner: false,
+      
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
+      //  RefreshIndicator(
+      //     onRefresh : refresh),
     );
   }
 }
